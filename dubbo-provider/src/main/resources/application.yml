@@ -1,0 +1,17 @@
+server:
+  port: 8081
+
+#dubbo的配置信息
+dubbo:
+  application:
+    name: provider
+  registry:
+    #注册中心地址
+    address: zookeeper://127.0.0.1:2181
+    timeout: 6000
+  protocol:
+    name: dubbo
+    port: 20880
+  scan:
+    #扫描的包的位置
+    base-packages: com.example.service.impl
